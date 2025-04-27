@@ -30,10 +30,6 @@ object DataSourceUtil {
     private var defaultHttpDataSourceFactory: HttpDataSource.Factory? = null
     private var userAgent: String? = null
 
-    private fun sendLogToReact(context: Context, message: String) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
-    }
-
     private fun getUserAgent(context: ReactContext): String {
         if (userAgent == null) {
             userAgent = Util.getUserAgent(context, context.packageName)
